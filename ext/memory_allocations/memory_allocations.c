@@ -33,7 +33,7 @@ set_gc_hook(rb_event_flag_t event)
 void
 Init_memory_allocations()
 {
-    VALUE cAllocations = rb_define_class("MemoryTracing", rb_cObject);
-    rb_define_singleton_method(cAllocations, "count_allocations", get_allocation_count, 0);
+    VALUE mAllocations = rb_define_module("MemoryTracing");
+    rb_define_module_function(mAllocations, "count_allocations", get_allocation_count, 0);
     set_gc_hook(RUBY_INTERNAL_EVENT_NEWOBJ);
 }

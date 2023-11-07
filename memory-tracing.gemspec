@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
 
   s.files         = ["lib/memory_tracing.rb"]
   s.require_paths = ["lib"]
-  s.extensions    = ["ext/memory_allocations/extconf.rb"]
+  s.extensions    = ["ext/memory_allocations/extconf.rb", "ext/memory_usage/extconf.rb"]
 
   s.required_ruby_version = '>= 3.0'
 
